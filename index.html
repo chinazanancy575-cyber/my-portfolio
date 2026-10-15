@@ -1,0 +1,1385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Nancy Chinaza's professional portfolio in Business Management, Analytics, Business Operations and Project Coordination.">
+
+  <title>Nancy Chinaza | Business Management & Analytics</title>
+
+  <style>
+    :root {
+      --cream: #f8f6f0;
+      --sage: #879681;
+      --sage-light: #edf0e8;
+      --brown: #46382f;
+      --muted: #77756e;
+      --white: #ffffff;
+      --border: #e8e3d9;
+      --soft: #eeece4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      line-height: 1.3;
+    }
+
+    h2 {
+      font-size: clamp(29px, 5vw, 38px);
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 600px;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .eyebrow {
+      color: #71806b;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 21px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      border: 1px solid var(--sage);
+      background: var(--sage);
+      color: var(--white);
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--brown);
+      border-color: var(--brown);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--brown);
+      border-color: var(--border);
+    }
+
+    .button-outline:hover {
+      color: white;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(248, 246, 240, 0.97);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 21px;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 19px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 12px;
+      color: var(--brown);
+    }
+
+    nav a:hover {
+      color: var(--sage);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 100px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .hero h1 {
+      font-size: clamp(39px, 6vw, 64px);
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--sage);
+    }
+
+    .hero-description {
+      color: var(--muted);
+      max-width: 570px;
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .hero-card .monogram {
+      width: 74px;
+      height: 74px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--sage-light);
+      color: var(--brown);
+      font-family: Georgia, serif;
+      font-size: 29px;
+      margin-bottom: 22px;
+    }
+
+    .hero-card h3 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .hero-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-card .availability {
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--sage-light);
+      color: #53664e;
+      border-radius: 30px;
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+
+    /* ABOUT */
+
+    .about-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 55px;
+    }
+
+    .about-intro {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      line-height: 1.5;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 13px;
+    }
+
+    .skill-card .symbol {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .skill-card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .skill-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 25px;
+    }
+
+    .tool {
+      background: var(--sage-light);
+      padding: 7px 12px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .experience-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .experience-card {
+      display: grid;
+      grid-template-columns: 175px 1fr;
+      gap: 25px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .experience-date {
+      font-size: 12px;
+      color: var(--sage);
+      font-weight: bold;
+    }
+
+    .experience-card h3 {
+      font-size: 21px;
+      margin-bottom: 4px;
+    }
+
+    .experience-company {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .experience-card p,
+    .experience-card li {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .experience-card ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    /* PROJECTS */
+
+    .projects-section {
+      background: var(--soft);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 29px;
+    }
+
+    .project-type {
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .project-card h3 {
+      font-size: 23px;
+      margin: 13px 0;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .project-card h4 {
+      font-size: 12px;
+      margin: 17px 0 7px;
+    }
+
+    .project-card ul {
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* EDUCATION */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .education-card {
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--white);
+    }
+
+    .education-card h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .education-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 7px;
+    }
+
+    /* CV SECTION */
+
+    .cv-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cv-intro {
+      max-width: 650px;
+      margin-bottom: 35px;
+    }
+
+    .cv-intro > p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    .cv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .cv-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 27px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.2s ease,
+                  box-shadow 0.2s ease;
+    }
+
+    .cv-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(70, 56, 47, 0.06);
+    }
+
+    .cv-icon {
+      background: var(--sage-light);
+      width: 51px;
+      height: 51px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      font-size: 23px;
+      margin-bottom: 17px;
+    }
+
+    .cv-label {
+      color: #71806b;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 7px;
+    }
+
+    .cv-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .cv-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 23px;
+      flex-grow: 1;
+    }
+
+    .cv-button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px 15px;
+      border-radius: 7px;
+      background: var(--sage);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .cv-button:hover {
+      background: var(--brown);
+    }
+
+    .cv-note {
+      margin-top: 25px;
+      padding: 20px;
+      background: var(--sage-light);
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      text-align: center;
+    }
+
+    .contact-inner {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .contact-inner > p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 15px 0 25px;
+    }
+
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer {
+      padding: 28px 15px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer a {
+      color: var(--brown);
+      text-decoration: none;
+    }
+
+    /* MOBILE RESPONSIVENESS */
+
+    @media (max-width: 760px) {
+      .navbar {
+        padding: 17px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 12px 17px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-card {
+        max-width: 100%;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+        gap: 9px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 90%;
+      }
+
+      .skills-grid,
+      .project-grid,
+      .education-grid,
+      .cv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .project-card,
+      .skill-card,
+      .cv-card {
+        padding: 23px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="brand">Nancy Chinaza.</a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#cv">My CVs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <>
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">
+            Welcome to my professional portfolio
+          </div>
+
+          <h1>
+            Business Management
+            <span>&amp; Analytics.</span>
+          </h1>
+
+          <p class="hero-description">
+            I'm Nancy Chinaza, an early-career professional
+            interested in business operations, analytics,
+            project coordination and process improvement.
+            I enjoy organizing information, supporting
+            business activities and finding practical ways
+            to make work more efficient.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="button">
+              Explore My Work
+            </a>
+
+            <a href="#cv" class="button button-outline">
+              View My CVs ↗
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="monogram">NC</div>
+
+          <h3>Nancy Chinaza</h3>
+
+          <p>
+            Business Management &amp; Analytics
+            <br>
+            Operations · Data · Project Coordination
+          </p>
+
+          <div class="availability">
+            Open to learning and opportunities
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+
+        <div>
+          <div class="eyebrow">A little about me</div>
+
+          <h2>
+            Turning everyday work into organized,
+            practical solutions.
+          </h2>
+        </div>
+
+        <div class="about-text">
+          <p>
+            I am an early-career Business Management and
+            Analytics professional with practical exposure
+            to business operations, data management, digital
+            marketing, sales operations and administrative
+            coordination.
+          </p>
+
+          <p>
+            My experience has shown me the importance of
+            accurate records, clear communication, organized
+            documentation and effective workflows in
+            supporting business objectives.
+          </p>
+
+          <p>
+            I am particularly interested in business
+            analysis, operational improvement and project
+            coordination. I am building my skills through
+            practical projects, professional learning and
+            hands-on experience.
+          </p>
+
+          <p>
+            I believe in continuous improvement, curiosity
+            and documenting progress while learning.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">What I bring</div>
+          <h2>Skills &amp; Areas of Focus</h2>
+
+          <p>
+            Practical skills I use and continue to develop
+            across business, operations and project work.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-card">
+            <div class="symbol">📊</div>
+            <h3>Business Analytics</h3>
+            <p>
+              Data organization, spreadsheet management,
+              reporting, research and interpreting
+              business information.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="symbol">⚙️</div>
+            <h3>Business Operations</h3>
+            <p>
+              Workflow organization, record keeping,
+              process documentation and operational
+              support.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="symbol">📋</div>
+            <h3>Project Coordination</h3>
+            <p>
+              Task tracking, planning, progress
+              documentation, follow-ups and organizing
+              project activities.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="symbol">🗂️</div>
+            <h3>Administration</h3>
+            <p>
+              Document organization, data entry,
+              information management and communication.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="symbol">📣</div>
+            <h3>Marketing &amp; Sales</h3>
+            <p>
+              Social media coordination, promotional
+              activities, customer service and
+              sales support.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="symbol">🤝</div>
+            <h3>Communication</h3>
+            <p>
+              Team collaboration, stakeholder
+              communication, customer interaction
+              and professional documentation.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="section-heading" style="margin-top: 40px;">
+          <h3 style="font-size: 22px;">Tools &amp; Technology</h3>
+
+          <div class="tools">
+            <span class="tool">Microsoft Excel</span>
+            <span class="tool">Google Sheets</span>
+            <span class="tool">Trello</span>
+            <span class="tool">Canva</span>
+            <span class="tool">Microsoft Word</span>
+            <span class="tool">WPS Office</span>
+            <span class="tool">Photoroom</span>
+            <span class="tool">Figma</span>
+            <span class="tool">Basic SQL</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">My professional journey</div>
+          <h2>Experience</h2>
+
+          <p>
+            A selection of my professional experience
+            across marketing, data management and sales.
+          </p>
+        </div>
+
+        <div class="experience-list">
+
+          <article class="experience-card">
+            <div class="experience-date">2024 – 2026</div>
+
+            <div>
+              <h3>Head of Marketing</h3>
+              <div class="experience-company">Zempaa · E-commerce</div>
+
+              <p>
+                Supported brand growth and digital
+                marketing activities for an e-commerce
+                platform.
+              </p>
+
+              <ul>
+                <li>Coordinated social media content and promotional campaigns.</li>
+                <li>Contributed to content planning, branding and audience engagement.</li>
+                <li>Supported marketing ideas and campaign organization.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-date">2023 – 2026</div>
+
+            <div>
+              <h3>Data Entry &amp; Merchandiser Coordinator</h3>
+              <div class="experience-company">Cospharma</div>
+
+              <p>
+                Supported business record organization,
+                data management and operational activities
+                for a cosmetics and hair products business.
+              </p>
+
+              <ul>
+                <li>Organized historical invoices, receipts and physical records into digital records.</li>
+                <li>Supported data entry and document organization.</li>
+                <li>Contributed to record accessibility and business information management.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-date">Current experience</div>
+
+            <div>
+              <h3>Sales Assistant / Shop Attendant</h3>
+              <div class="experience-company">Dan Don Official · Gadget Retail</div>
+
+              <p>
+                Supporting day-to-day retail activities
+                while developing practical knowledge of
+                technology products and customer service.
+              </p>
+
+              <ul>
+                <li>Assist customers with product enquiries and purchases.</li>
+                <li>Support shop operations and product organization.</li>
+                <li>Develop customer communication and sales skills.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+        <section class="section projects-section" id="projects">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Practical application</div>
+          <h2>Selected Projects</h2>
+
+          <p>
+            Examples of how I apply business thinking,
+            organization and digital tools to practical
+            operational challenges.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <div class="project-type">
+              Operations Improvement · Portfolio Project
+            </div>
+
+            <h3>TechHub Gadget Operational Optimization</h3>
+
+            <p>
+              A practical project concept focused on
+              improving the organization of a gadget
+              retail business through structured records,
+              inventory tracking and workflow improvement.
+                        </p>
+
+            <h4>Problem areas</h4>
+            <ul>
+              <li>Customer waiting times targeted for reduction from 5–7 minutes to 3 minutes or less.</li>
+              <li>Missing cost and profit records targeted for complete documentation.</li>
+              <li>Inventory and expense tracking requiring better organization.</li>
+            </ul>
+
+            <h4>Proposed tools and solutions</h4>
+            <ul>
+              <li>Excel inventory, expense and profit trackers.</li>
+              <li>Trello task planning and progress monitoring.</li>
+              <li>Standard operating procedures and regular reviews.</li>
+            </ul>
+
+            <div class="tools">
+              <span class="tool">Excel</span>
+              <span class="tool">Trello</span>
+              <span class="tool">Process Improvement</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-type">
+              Data Management · Practical Experience
+            </div>
+
+            <h3>Business Records Digitization</h3>
+
+            <p>
+              A record organization initiative based on
+              my experience supporting the digitization
+              of historical business invoices, receipts
+              and other physical records.
+            </p>
+
+            <h4>Focus areas</h4>
+            <ul>
+              <li>Organizing business information into digital records.</li>
+              <li>Improving document accessibility and retrieval.</li>
+              <li>Supporting more structured record keeping.</li>
+            </ul>
+              <li>Organizing business information into digital records.</li>
+              <li>Improving document accessibility and retrieval.</li>
+              <li>Supporting more structured record keeping.</li>
+            </ul>
+
+            <h4>Relevant skills</h4>
+            <ul>
+              <li>Data entry and validation.</li>
+              <li>Spreadsheet organization and documentation.</li>
+              <li>Business information management.</li>
+            </ul>
+
+            <div class="tools">
+              <span class="tool">Data Entry</span>
+              <span class="tool">Documentation</span>
+              <span class="tool">Spreadsheets</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Learning & development</div>
+              <h2>Education &amp; Credentials</h2>
+
+          <p>
+            My academic background and ongoing
+            professional development.
+          </p>
+        </div>
+
+        <div class="education-grid">
+
+          <article class="education-card">
+            <div class="eyebrow">Academic education</div>
+
+            <h3>International Relations</h3>
+
+            <p>
+              National Open University of Nigeria (NOUN)
+            </p>
+
+            <p>
+              Undergraduate student · Second year,
+              second semester as of 2026.
+            </p>
+
+            <p>
+              Areas of interest include international
+              affairs, policy, diplomacy and the
+              relationship between technology and
+              development.
+            </p>
+          </article>
+
+          <article class="education-card">
+            <div class="eyebrow">Professional development</div>
+
+            <h3>Courses &amp; Learning</h3>
+
+            <p>Google Data Analytics · Coursera</p>
+            <p>Social Media Management · Meta / Coursera</p>
+            <p>Project coordination and operational skills development.</p>
+
+            <p>
+              Add links to your verified certificates
+              here when you are ready to publish them.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL FOUR CVS ARE BUILT INTO THIS WEBSITE -->
+    <section class="section cv-section" id="cv">
+      <div class="container">
+
+        <div class="cv-intro">
+          <div class="eyebrow">Curriculum Vitae</div>
+
+          <h2>Let's Find the Right Fit.</h2>
+       <p>
+            I've prepared different versions of my CV
+            to highlight my skills and experience
+            across business management, analytics,
+            operations and project coordination.
+            Choose the version most relevant to
+            your opportunity.
+          </p>
+        </div>
+
+        <div class="cv-grid">
+
+          <!-- CV 01 -->
+          <article class="cv-card">
+            <div class="cv-icon">📋</div>
+            <div class="cv-label">CV 01</div>
+
+            <h3>Project Coordination</h3>
+
+            <p>
+              For project coordinator, project assistant,
+              planning, task tracking, documentation
+              and team support opportunities.
+            </p>
+
+            <a class="cv-button"
+               href="https://canva.link/1wn337sa359v56h"
+               target="_blank"
+               rel="noopener noreferrer">
+              View My CV ↗
+            </a>
+          </article>
+
+          <!-- CV 02 -->
+          <article class="cv-card">
+            <div class="cv-icon">💼</div>
+            <div class="cv-label">CV 02</div>
+            <h3>Business Management</h3>
+
+            <p>
+              For business management, administrative
+              support, business operations and
+              office coordination roles.
+            </p>
+
+            <a class="cv-button"
+               href="https://canva.link/se7vejfg2ndhk9s"
+               target="_blank"
+               rel="noopener noreferrer">
+              View My CV ↗
+            </a>
+          </article>
+
+          <!-- CV 03 -->
+          <article class="cv-card">
+            <div class="cv-icon">📊</div>
+            <div class="cv-label">CV 03</div>
+
+            <h3>Business Analyst / Operations</h3>
+
+            <p>
+              For business analysis, operational support,
+              data management, reporting and
+              process improvement opportunities.
+            </p>
+
+            <a class="cv-button"
+               href="https://canva.link/wcacopbg6llp6po"
+               target="_blank"
+               rel="noopener noreferrer">
+              View My CV ↗
+            </a>
+          </article>
+
+          <!-- CV 04 -->
+          <article class="cv-card">
+            <div class="cv-icon">📈</div>
+            <div class="cv-label">CV 04</div>
+
+            <h3>Business Management &amp; Analytics</h3>
+
+            <p>
+              For business management, analytics,
+              reporting, documentation and
+              business support opportunities.
+            </p>
+
+            <a class="cv-button"
+               href="https://canva.link/7wtlxzdyw42zpvk"
+               target="_blank"
+               rel="noopener noreferrer">
+              View My CV ↗
+            </a>
+          </article>
+       </div>
+      
+        <div class="cv-note">
+          Each button opens its corresponding Canva CV
+          in a new tab. Make sure each design's sharing
+          settings allow recruiters to view it.
+        </div>
+
+      </div>
+    </section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" style="
+  padding: 50px 20px;
+  background: #f8f6f1;
+  text-align: center;
+  font-family: Arial, sans-serif;
+">
+
+  <p style="
+    color: #71816b;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  ">Get in Touch</p>
+
+  <h2 style="
+    color: #49382f;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+  ">Let's Connect.</h2>
+
+  <p style="
+    color: #746d66;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 500px;
+    margin: 0 auto 30px;
+  ">
+    I'm open to opportunities in Business Management,
+    Analytics, Business Operations and Project Coordination.
+    I'd love to hear from you.
+  </p>
+
+  <!-- CONTACT CARDS CONTAINER -->
+  <div style="
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: left;
+  ">
+
+    <!-- EMAIL CARD -->
+    <a href="mailto:chinazanancy575@gmail.com"
+       style="
+         display: block;
+         box-sizing: border-box;
+         width: 100%;
+         padding: 22px;
+         background: #ffffff;
+         border: 1px solid #e5e0d8;
+         border-radius: 14px;
+         text-decoration: none;
+         color: #49382f;
+         box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+       ">
+      <div style="font-size: 25px; margin-bottom: 10px;">✉️</div>
+      <div style="font-size: 19px; font-family: Georgia, serif; margin-bottom: 8px;">
+        Email Me
+      </div>
+      <div style="font-size: 14px; color: #746d66; overflow-wrap: anywhere;">
+        chinazanancy575@gmail.com
+      </div>
+    </a>
+
+    <!-- PHONE CARD -->
+    <a href="tel:+2347025068729"
+       style="
+         display: block;
+         box-sizing: border-box;
+         width: 100%;
+         padding: 22px;
+         background: #ffffff;
+         border: 1px solid #e5e0d8;
+         border-radius: 14px;
+         text-decoration: none;
+         color: #49382f;
+         box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+       ">
+      <div style="font-size: 25px; margin-bottom: 10px;">📞</div>
+      <div style="font-size: 19px; font-family: Georgia, serif; margin-bottom: 8px;">
+        Call Me
+      </div>
+      <div style="font-size: 14px; color: #746d66;">
+        +234 702 506 8729
+      </div>
+    </a>
+
+    <!-- WHATSAPP CARD -->
+    <a href="https://wa.me/2347025068729"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="
+         display: block;
+         box-sizing: border-box;
+         width: 100%;
+         padding: 22px;
+         background: #ffffff;
+         border: 1px solid #e5e0d8;
+         border-radius: 14px;
+         text-decoration: none;
+         color: #49382f;
+         box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+       ">
+      <div style="font-size: 25px; margin-bottom: 10px;">💬</div>
+      <div style="font-size: 19px; font-family: Georgia, serif; margin-bottom: 8px;">
+        WhatsApp Me
+      </div>
+      <div style="font-size: 14px; color: #746d66;">
+        Start a conversation ↗
+      </div>
+    </a>
+
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    max-width: 480px;
+    margin: 28px auto 0;
+  ">
+
+    <a href="https://www.linkedin.com/in/ngwu-chinaza/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="
+         display: block;
+         box-sizing: border-box;
+         width: 100%;
+         padding: 15px 20px;
+         background: #71816b;
+         color: #ffffff;
+         text-decoration: none;
+         text-align: center;
+         border-radius: 8px;
+       ">
+      Connect on LinkedIn ↗
+    </a>
+
+    <a href="#cv"
+       style="
+         display: block;
+         box-sizing: border-box;
+         width: 100%;
+         padding: 15px 20px;
+         background: transparent;
+         color: #49382f;
+         border: 1px solid #49382f;
+         text-decoration: none;
+         text-align: center;
+         border-radius: 8px;
+       ">
+      Explore My CVs
+    </a>
+
+  </div>
+
+</section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 Nancy Chinaza · Business Management &amp; Analytics
+    </p>
+
+    <p>
+      Documenting growth, not perfection.
+    </p>
+
+    <p style="margin-top: 10px;">
+      <a href="#home">Back to top ↑</a>
+    </p>
+  </footer>
+
+</body>
+</html>
